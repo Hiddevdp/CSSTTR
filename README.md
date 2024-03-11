@@ -31,6 +31,6 @@ Deze week heb ik een 3d lesje gehad van Sanne waar ik wat inspiratie heb opgedaa
 
 Dit heb ik voor elkaar gekregen door 8 sections achter de eerste te zetten om zo het idee te geven dat het paneel diepte heeft.
 
-<img src="media/readme-img/8sections.png" width="500px" alt="control panel html">
+<img src="media/readme-img/8sections.png" width="200px" alt="control panel html">
 
-<img src="media/readme-img/8sectionsStyling.png" width="500px" alt="control panel css">
+<img src="media/readme-img/8sectionsStyling.png" width="300px" alt="control panel css">
