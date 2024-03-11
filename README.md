@@ -13,7 +13,9 @@ Nog geen feedback deze week.
 ## Week 2
 
 Deze week heb ik een begin gemaakt aan het project. Ik heb een idee bedacht en daar een snelle schets van gemaakt:
+
 <img src="media/readme-img/Sketch.png" width="500px" alt="Schets">
+
 Het idee is om een animatie te laten afspelen, in dit geval een Dna string. Die kan je dan aanpassen met de control panel. Je kan de kleuren, de breedte, de lengte etc. aanpassen. 
 
 ### Feedback
