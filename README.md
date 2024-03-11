@@ -29,8 +29,10 @@ Deze week heb ik een 3d lesje gehad van Sanne waar ik wat inspiratie heb opgedaa
 
 <img src="media/readme-img/Controlpanel3d.png" width="500px" alt="control panel">
 
-Dit heb ik voor elkaar gekregen door 8 sections achter de eerste te zetten om zo het idee te geven dat het paneel diepte heeft.
+Dit heb ik voor elkaar gekregen door 8 sections neer te zetten.
 
 <img src="media/readme-img/8sections.png" width="200px" alt="control panel html">
 
 <img src="media/readme-img/8sectionsStyling.png" width="300px" alt="control panel css">
+
+Daarna heb ik in de styling gezorgd dat ze op de Z as elk 4px achter elkaar staan. Zo creeer je het 3d effect op oppervlakken met een border-radius.
