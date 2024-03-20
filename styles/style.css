@@ -1,9 +1,12 @@
 :root {
   --color-selection-1: red;
+  --color-selection-gradient-1: rgb(105, 0, 0);
   --color-selection-2: blue;
+  --color-selection-gradient-2: rgb(0, 0, 133);
   --color-selection-3: green;
+  --color-selection-gradient-3: rgb(0, 65, 0);
   --color-selection-4: yellow;
-  --color-selection-gradient: rgba(0, 0, 0, 0.781);
+  --color-selection-gradient-4: rgb(138, 138, 0);
   --color-selection-box-shadow: rgb(17, 17, 17);
 }
 
@@ -42,7 +45,6 @@ body > div:first-of-type > div {
 
 body > div:first-of-type > div > div {
   grid-area: 1/1;
-  background-image: radial-gradient(purple, darkred);
   width: 4em;
   border: 1px solid white;
 }
@@ -50,37 +52,38 @@ body > div:first-of-type > div > div {
 /* Front */
 body > div:first-of-type > div > div:first-of-type {
   height: var(--height);
-  transform: translateZ(2em);
+  width: var(--length);
+  transform: translateZ(var(--z));
 }
 
 /* Right */
 body > div:first-of-type > div > div:nth-of-type(2) {
   height: var(--height);
-  transform: rotatey(90deg) translateZ(2em);
+  transform: rotatey(90deg) translateZ(var(--z));
 }
 
 /* Left */
 body > div:first-of-type > div > div:nth-of-type(3) {
   height: var(--height);
-  transform: rotatey(-90deg) translateZ(2em);
+  transform: rotatey(-90deg) translateZ(var(--z));
 }
 
 /* Back */
 body > div:first-of-type > div > div:nth-of-type(4) {
   height: var(--height);
-  transform: rotatey(180deg) translateZ(2em);
+  transform: rotatey(180deg) translateZ(var(--z));
 }
 
 /* Top */
 body > div:first-of-type > div > div:nth-of-type(5) {
   height: 4em;
-  transform: rotatex(90deg) translateZ(2em);
+  transform: rotatex(90deg) translateZ(var(--z));
 }
 
 /* Bottom */
 body > div:first-of-type > div > div:nth-of-type(6) {
   height: 4em;
-  transform: rotatex(-90deg) translateZ(calc(var(--height) - 2em));
+  transform: rotatex(-90deg) translateZ(calc(var(--height) - 4em + var(--z)));
 }
 
 @keyframes turn {
@@ -101,7 +104,7 @@ body > div:nth-of-type(2) {
 
 section {
   grid-area: 1/1;
-  background-color: darkolivegreen;
+  background-color: rgb(44, 70, 0);
   border-radius: 1em;
   width: 80vw;
   max-width: 40em;
@@ -109,7 +112,7 @@ section {
 }
 
 section:first-of-type {
-  background-image: radial-gradient(darkseagreen, rgb(85, 116, 85)) !important;
+  background-image: radial-gradient(darkseagreen, rgb(58, 80, 58)) !important;
   padding: 1em;
   display: grid;
   grid-template: 1fr 1fr 2fr/1fr 1fr 1fr 1fr;
@@ -225,12 +228,14 @@ section div:nth-of-type(4) {
   bottom: 0;
 }
 
-section div:nth-last-of-type(-n + 4) {
+section input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
   width: 5em;
   aspect-ratio: 1/1;
   background-image: radial-gradient(
     var(--color-selection-1),
-    var(--color-selection-gradient)
+    var(--color-selection-gradient-1)
   ) !important;
   grid-row: 3 / 4;
   align-self: center;
@@ -242,31 +247,59 @@ section div:nth-last-of-type(-n + 4) {
   transition: 0.2s;
 }
 
-section div:nth-last-of-type(-n + 4):active {
-  translate: 0 4px 0;
-  box-shadow: 0px 0px 0px var(--color-selection-box-shadow);
-}
-
-section div:nth-of-type(6) {
+section input[type="radio"]:nth-of-type(5) {
   background-image: radial-gradient(
     var(--color-selection-2),
-    var(--color-selection-gradient)
+    var(--color-selection-gradient-2)
   ) !important;
   box-shadow: 1px 5px 0 var(--color-selection-box-shadow);
 }
 
-section div:nth-of-type(7) {
+section input[type="radio"]:nth-of-type(6) {
   background-image: radial-gradient(
     var(--color-selection-3),
-    var(--color-selection-gradient)
+    var(--color-selection-gradient-3)
   ) !important;
   box-shadow: -1px 5px 0 var(--color-selection-box-shadow);
 }
 
-section div:nth-of-type(8) {
+section input[type="radio"]:nth-of-type(7) {
   background-image: radial-gradient(
     var(--color-selection-4),
-    var(--color-selection-gradient)
+    var(--color-selection-gradient-4)
   ) !important;
   box-shadow: -2px 5px 0 var(--color-selection-box-shadow);
+}
+
+section input[type="radio"]:active {
+  translate: 0 4px 0;
+  box-shadow: 0px 0px 0px var(--color-selection-box-shadow);
+}
+
+body:has(input[value="red"]:checked) > div:first-of-type > div > div {
+  background-image: radial-gradient(
+    var(--color-selection-1),
+    var(--color-selection-gradient-1)
+  );
+}
+
+body:has(input[value="blue"]:checked) > div:first-of-type > div > div {
+  background-image: radial-gradient(
+    var(--color-selection-2),
+    var(--color-selection-gradient-2)
+  );
+}
+
+body:has(input[value="green"]:checked) > div:first-of-type > div > div {
+  background-image: radial-gradient(
+    var(--color-selection-3),
+    var(--color-selection-gradient-3)
+  );
+}
+
+body:has(input[value="yellow"]:checked) > div:first-of-type > div > div {
+  background-image: radial-gradient(
+    var(--color-selection-4),
+    var(--color-selection-gradient-4)
+  );
 }
