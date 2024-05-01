@@ -314,7 +314,7 @@ section input[type="radio"] {
     box-shadow: 0px 0px 0px var(--color-selection-box-shadow);
   }
 }
-
+/* De knoppen worden kleiner als de container kleiner wordt */
 @container (max-width: 370px) {
   section input[type="radio"] {
     scale: 0.8;
