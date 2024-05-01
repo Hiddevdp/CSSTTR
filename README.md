@@ -74,5 +74,16 @@ Als laatste moest ik nog een slider doen. Die wilde ik aan de translateZ koppele
 
 <img src="media/readme-img/demo.png" width="500px" alt="demo">
 
+Ik heb een containerquery gebruikt om de knoppen op het controlpanel wat kleiner te maken bij een kleiner scherm. Wanneer het panel kleiner wordt dan 370px schalen de knoppen naar 0.8 keer de originele grootte.
+
+<img src="media/readme-img/containerQuery.png" width="500px" alt="container query">
+
+Ik heb ook css nesting toegepast in mijn project. Hierin "nest" je bepaalde styling in algemene styling.
+
+<img src="media/readme-img/cssNesting.png" width="500px" alt="css nesting">
+
+In het plaatje is te zien dat ik als eerste alle sections dezelfde styling geef, om daarna per section de translateZ aan te passen. Op deze manier gebruik je minder tekens in je css en ik vind het er ook een stuk overzichtelijker uitzien. 
+
+
 
 
